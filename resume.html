@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Your Name</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <script defer src="script.js"></script>
+    <style>
+        .resume-section {
+            position: relative;
+            margin-left: 2.5em;
+            padding-left: 1.5em;
+        }
+
+        .resume-section::before {
+            content: "";
+            position: absolute;
+            left: 0.5em;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #1C6C9D;
+            border-radius: 2px;
+            z-index: 0;
+        }
+
+        .resume-entry {
+            position: relative;
+            margin-bottom: 2.2em;
+            padding-left: 0.5em;
+        }
+
+        .resume-entry::before {
+            content: "";
+            position: absolute;
+            left: -2em;
+            top: 0.7em;
+            width: 0.8em;
+            height: 0.8em;
+            background: #1C6C9D;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px #fff;
+            z-index: 1;
+        }
+
+        .resume-company {
+            font-weight: 700;
+            font-size: 1.05em;
+            margin-bottom: 0.2em;
+        }
+
+        .resume-date {
+            color: #1C6C9D;
+            font-size: 0.95em;
+            margin-bottom: 0.2em;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+        }
+
+        .resume-role {
+            font-style: italic;
+            font-size: 0.98em;
+            margin-bottom: 0.3em;
+        }
+
+        .resume-desc {
+            list-style: disc outside;
+            margin-top: 0.5em;
+            color: #000;
+            font-size: 0.95em;
+            padding-left: 1.2em;
+        }
+
+        .resume-desc li {
+            margin-bottom: 0.7em;
+        }
+
+        .skills-section {
+            margin-top: 2.5em;
+            margin-bottom: 2em;
+            text-align: center;
+        }
+
+        .skills-title {
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-bottom: 1em;
+            letter-spacing: 0.04em;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7em;
+            justify-content: center;
+            margin-bottom: 0.5em;
+        }
+
+        .skill-badge {
+            background: #1C6C9D22;
+            color: #222;
+            border-radius: 2em;
+            padding: 0.45em 1.2em;
+            font-size: 0.97em;
+            font-weight: 500;
+            box-shadow: 0 2px 8px #1C6C9D22;
+            border: 1px solid #1C6C9D;
+            transition: background 0.2s, color 0.2s;
+            margin-bottom: 0.2em;
+        }
+
+        .skill-badge:hover {
+            background: #1C6C9D;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-card-container">
+        <nav class="top-card-nav">
+            <a href="about.html">About</a>
+            <a href="resume.html" class="active">Resume</a>
+            <a href="project.html">Project</a>
+            <!-- Photos page link removed -->
+            <a href="contact.html">Contact</a>
+            <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+        </nav>
+        <section class="about-card">
+            <div class="about-bio">
+                <h1 class="about-title"><i class="fas fa-briefcase"></i> Experience</h1>
+                <div class="resume-section">
+                    <div class="resume-entry">
+                        <h2 class="resume-company">Guangdong Longda Finance and Taxation Technology Co., Ltd</h2>
+                        <div class="resume-date">JAN 2026 – FEB 2026</div>
+                        <div class="resume-role"><strong>Accounting Assistant</strong></div>
+                        <ul class="resume-desc">
+                            <li>Assisted with daily bookkeeping tasks, including voucher preparation and account
+                                reconciliation</li>
+                            <li>Supported the preparation of monthly financial statements and basic financial analysis
+                            </li>
+                            <li>Helped manage invoices, expense reimbursements, and tax-related documentation</li>
+                            <li>Assisted in audit support and client account verification to ensure data accuracy</li>
+                            <li>Utilized Excel for data organization and basic analysis</li>
+                        </ul>
+                    </div>
+                    <div class="resume-entry">
+                        <h2 class="resume-company">MAEC Students' Club</h2>
+                        <div class="resume-date">SEPT 2025 – Present</div>
+                        <div class="resume-role"><strong>Financial Secretary</strong></div>
+                        <ul class="resume-desc">
+                            <li>Oversee the club's financial operations, including budgeting, cash flow management, and
+                                financial reporting</li>
+                            <li>Lead annual budget planning and allocation of funds across multiple events and
+                                initiatives
+                            </li>
+                            <li>Maintain transparent financial records and implement internal controls to safeguard club
+                                assets</li>
+                        </ul>
+                    </div>
+                    <div class="resume-entry">
+                        <h2 class="resume-company">NEC China Preliminary 2023</h2>
+                        <div class="resume-date">NOV 2022 – DEC 2022</div>
+                        <div class="resume-role"><strong>Team Leader</strong></div>
+                        <ul class="resume-desc">
+                            <li>Regional Macroeconomics Individual Distinction Award</li>
+                        </ul>
+                    </div>
+                </div>
+                <h1 class="about-title"><i class="fas fa-graduation-cap"></i> Education</h1>
+                <div class="resume-section">
+                    <div class="resume-entry">
+                        <h2 class="resume-company">Hong Kong University of Science and Technology (HKUST)</h2>
+                        <div class="resume-date">SEPT 2024 – MAY 2028 (EXPECTED)</div>
+                        <div class="resume-role"><strong>BSc in Mathematics and Economics</strong></div>
+                        <ul class="resume-desc">
+
+                            <li>Activities and Societies: MAEC Students' Club</li>
+                        </ul>
+                    </div>
+                </div>
+                <h1 class="about-title"><i class="fas fa-certificate"></i> Certifications & Exams</h1>
+                <div class="resume-section">
+                    <div class="resume-entry">
+                        <h2 class="resume-company">JobReady</h2>
+                        <div class="resume-date">MAR 2023 </div>
+                        <div class="resume-role"><strong>Simulation Internship</strong></div>
+                        <ul class="resume-desc">
+                            <li> Learned Python programming skills in relation to pratical business tasks</li>
+                            <li> Solved simulation business problems with Python.</li>
+                        </ul>
+                    </div>
+                    <div class="resume-entry">
+                        <h2 class="resume-company">EdX Online Courses</h2>
+                        <div class="resume-date">NOV 2022 - DEC 2022</div>
+                        <div class="resume-role"><strong>Foundations of Finance</strong></div>
+                        <div class="resume-role"><strong>Statistical Thinking for Data Science and Analytics</strong>
+                        </div>
+                        <div class="resume-role"><strong>Data Analytics in Accounting and Finance</strong></div>
+                    </div>
+                    <div class="resume-entry">
+                        <h2 class="resume-company">Coursera Specialization</h2>
+                        <div class="resume-date">AUG 2022 - OCT 2022</div>
+                        <div class="resume-role"><strong>Excel to MySQL</strong></div>
+                        <div class="resume-role"><strong>Analytic Techniques for Business</strong></div>
+                        <ul class="resume-desc">
+                            <li> Learned to use data analytics to make any company more competitive and profitable</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

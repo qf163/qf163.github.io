@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <style>
+                .about-photo {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 2em;
+                }
+                .profile-pic {
+                    width: 500px;
+                    height: 500px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: 4px solid #a3c9f7;
+                    box-shadow: 0 2px 12px rgba(163,201,247,0.13);
+                    background: #e3f0fc;
+                }
+            </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Yany Kwan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="main-card-container">
+        <nav class="top-card-nav">
+            <a href="about.html" class="active">About</a>
+            <a href="resume.html">Resume</a>
+            <a href="project.html">Project</a>
+            <!-- Photos page link removed -->
+            <a href="contact.html">Contact</a>
+            <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+        </nav>
+        <section class="about-card">
+            <div class="about-bio">
+                <h1 class="about-title">About Me</h1>
+                <p class="about-desc"><strong>Hi! I'm Fannie,</strong> a second-year Mathematics and Economics student at HKUST. I focus on the structural and numerical foundations of finance, connecting precise calculation with strategic business understanding.</p>
+                <p class="about-desc">My work sits at the intersection of numerical accuracy, regulatory frameworks, and data-driven decision-making.</p>
+                <p class="about-desc">I am looking for roles where I can leverage my analytical mindset and technical skills to navigate complex financial landscapes and contribute to sound, evidence-based outcomes.</p>
+                <h2 class="doing-title">Areas of Focus</h2>
+                <div class="doing-grid">
+                    <div class="doing-card">
+                        <i class="fas fa-file-invoice-dollar doing-icon"></i>
+                        <div>
+                            <div class="doing-label">Financial Accounting</div>
+                            <div class="doing-desc">Working with the language of business — recording transactions, preparing statements, and applying principles to represent economic reality clearly and accurately.</div>
+                        </div>
+                    </div>
+                    <div class="doing-card">
+                        <i class="fas fa-clipboard-check doing-icon"></i>
+                        <div>
+                            <div class="doing-label">Audit & Financial Compliance</div>
+                            <div class="doing-desc">Engaging in the critical examination of financial records and processes to ensure integrity, accuracy, and adherence to laws and standards.</div>
+                        </div>
+                    </div>
+                    <div class="doing-card">
+                        <i class="fas fa-filter doing-icon"></i>
+                        <div>
+                            <div class="doing-label">Financial Data Analysis</div>
+                            <div class="doing-desc">Processing and interpreting complex financial information to identify trends, assess performance, and support data-informed business decisions.</div>
+                        </div>
+                    </div>
+                    <div class="doing-card">
+                        <i class="fas fa-cubes doing-icon"></i>
+                        <div>
+                            <div class="doing-label">Quantitative & Economic Research</div>
+                            <div class="doing-desc">Constructing and applying mathematical and statistical models to investigate economic phenomena, test hypotheses, and forecast financial outcomes.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-photo">
+                <img class="profile-pic" src="assets/IMG_4986.jpg" alt="Profile Picture" />
+            </div>
+        </section>
+    </div>
+</body>
+</html>

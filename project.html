@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-img {
+            max-width: 90vw;
+            max-height: 80vh;
+            border-radius: 1em;
+            box-shadow: 0 2px 16px rgba(163, 201, 247, 0.25);
+            background: #fff;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 2em;
+            right: 2em;
+            font-size: 2em;
+            color: #fff;
+            cursor: pointer;
+            z-index: 1001;
+        }
+    </style>
+    <style>
+        .project-cards {
+            display: flex;
+            gap: 2em;
+            flex-wrap: wrap;
+            margin-top: 2em;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 1.2em;
+            box-shadow: 0 2px 16px rgba(163, 201, 247, 0.13);
+            flex: 1 1 340px;
+            min-width: 320px;
+            max-width: 480px;
+            padding: 2em 2em 1.5em 2em;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2em;
+            border: 1.5px solid #f3f3f3;
+            position: relative;
+        }
+
+        .project-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5em;
+            margin-bottom: 0.2em;
+        }
+
+        .project-title {
+            color: #222;
+            font-size: 1.18em;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .github-link {
+            margin-left: 0.5em;
+            color: #888;
+            font-size: 1.15em;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .github-link:hover {
+            color: #24292f;
+        }
+
+        .project-subtitle {
+            color: #1C6C9D;
+            font-size: 1em;
+            font-weight: 600;
+            margin-bottom: 0.2em;
+        }
+
+        .project-date {
+            color: #bdbdbd;
+            font-size: 0.95em;
+            margin-bottom: 1em;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+        }
+
+        .project-desc {
+            list-style: disc outside;
+            color: #888;
+            font-size: 0.97em;
+            margin-left: 1.2em;
+            margin-bottom: 0.5em;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Your Name</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="main-card-container">
+        <nav class="top-card-nav">
+            <a href="about.html">About</a>
+            <a href="resume.html">Resume</a>
+            <a href="project.html" class="active">Project</a>
+            <!-- Photos page link removed -->
+            <a href="contact.html">Contact</a>
+            <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+        </nav>
+        <section class="about-card">
+            <div class="about-bio">
+                <h1 class="about-title">Projects</h1>
+                <div class="project-cards">
+                    <div class="project-card">
+                        <div class="project-title-row">
+                            <span class="project-title">A prospective study on the ageing economy of China's Greater Bay
+                                Region</span>
+                        </div>
+                        <div class="project-subtitle">Academic Research</div>
+                        <div class="project-date">JUL 2023 - SEP 2023</div>
+                        <ul class="project-desc">
+                            <li>Studied the demographic situations of the Greater Bay Region and the
+                                economic capacity of the elderly age group; projected their future
+                                development</li>
+                            <li>Identified current providers of the ageing economy; analysed various
+                                business models; discussed potential for introducing existing business models
+                                from developed economies</li>
+                            <li>Discussed current setbacks and potential improvement of the ageing
+                                economy industry.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+<div id="modal" class="modal">
+    <span class="modal-close" id="modalClose">&times;</span>
+    <img id="modalImg" class="modal-img" src="" alt="Large Project Photo" />
+</div>
+<script>
+    document.querySelectorAll('.drw-photo').forEach(function (img) {
+        img.addEventListener('click', function () {
+            document.getElementById('modalImg').src = img.src;
+            document.getElementById('modal').classList.add('active');
+        });
+    });
+    document.getElementById('modalClose').onclick = function () {
+        document.getElementById('modal').classList.remove('active');
+        document.getElementById('modalImg').src = '';
+    };
+    document.getElementById('modal').onclick = function (e) {
+        if (e.target === this) {
+            document.getElementById('modal').classList.remove('active');
+            document.getElementById('modalImg').src = '';
+        }
+    };
+</script>
+</body>
+
+</html>
